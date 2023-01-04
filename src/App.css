@@ -1,0 +1,60 @@
+body {
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+.App {
+    position: absolute;
+    height: 500px;
+    width: 400px;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.input-window,
+.output-window {
+    background-color: rgba(255, 255, 255);
+
+    font-size: 2.5rem;
+
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    padding: 1rem;
+
+}
+
+.input-window {
+    min-height: 8rem;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.output-window {
+    height: 3rem;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-rows: repeat(5, minmax(6rem, 1fr));
+}
+
+.buttons button {
+    cursor: pointer;
+    font-size: 1.8rem;
+    color: rgb(245, 255, 250);
+    border: 1px solid black;
+    background-color: rgba(105, 105, 105, 0.75);
+}
+
+.buttons .bracket-button {
+    background-color: rgb(32, 178, 170);
+}
+
+.buttons .removal-button {
+    background-color: rgb(255, 69, 0);
+}
+
