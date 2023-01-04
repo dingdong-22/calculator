@@ -16,16 +16,16 @@ body {
 .input-window,
 .output-window {
     background-color: rgba(255, 255, 255);
-    font-size: 2rem;
     display: flex;
     flex-direction: row-reverse;
-    align-items: flex-end;
+    font-size: 2rem;
     padding: 0.7rem;
 }
 
 .input-window {
     min-height: 8rem;
     border: 1px black solid;
+    align-items: flex-end;
     word-wrap: break-word;
     word-break: break-all;
 }
@@ -33,6 +33,7 @@ body {
 .output-window {
     border: 1px black solid;
     height: 3rem;
+    align-items: center;
 }
 
 .buttons {
@@ -42,11 +43,11 @@ body {
 }
 
 .buttons button {
-    cursor: pointer;
-    font-size: 1.8rem;
+    background-color: rgba(105, 105, 105, 0.75);
     color: rgb(245, 255, 250);
     border: 1px solid black;
-    background-color: rgba(105, 105, 105, 0.75);
+    font-size: 1.8rem;
+    cursor: pointer;
 }
 
 .buttons .bracket-button {
