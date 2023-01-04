@@ -3,6 +3,7 @@ let actions = {
     "×": (a, b) => a * b,
     "+": (a, b) => a + b,
     "-": (a, b) => a - b,
+    "^": (a, b) => Math.pow(a, b),
 };
 
 let binaryExpr = {
@@ -13,6 +14,9 @@ let binaryExpr = {
     ),
     "-": new RegExp(
         `(?<e1>\\-?[0-9]+\\.?[0-9]*)\\-(?<e2>\\-?[0-9]+\\.?[0-9]*)`
+    ),
+    "^": new RegExp(
+        `(?<e1>\\-?[0-9]+\\.?[0-9]*)\\^(?<e2>\\-?[0-9]+\\.?[0-9]*)`
     ),
 };
 
@@ -90,6 +94,6 @@ function calc(expression) {
     return Number(expression);
 }
 
-export default calc
+export default calc;
 
 //maybe add a manual input

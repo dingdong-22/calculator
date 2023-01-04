@@ -53,7 +53,7 @@ function Buttons(props) {
             <button onClick={() => addChar("-")}>-</button>
             <button onClick={() => addChar("0")}>0</button>
             <button onClick={() => addChar(".")}>.</button>
-            <button>spare</button>
+            <button onClick={() => addChar("^")}>^</button>
             <button onClick={() => addChar("+")}>+</button>
         </div>
     );
