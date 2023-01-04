@@ -1,9 +1,5 @@
 import React, { useState } from "react";
 
-//need to css it so that it stays in box
-
-//needs check for brackets )8(
-
 //maybe add a manual input
 
 let actions = {
@@ -57,9 +53,28 @@ function unaryResolver(exprChunk) {
     return exprChunk;
 }
 
+function parentheseCount(expression) {
+    let counter = 0;
+    for (let char of expression) {
+        if (char === "(") {
+            counter++;
+        } else if (char === ")") {
+            counter--;
+        }
+        if (counter < 0) {
+            return false;
+        }
+    }
+    return counter === 0;
+}
+
 function calc(expression) {
     console.log("expression", expression);
+    if (!parentheseCount(expression)) {
+        return NaN;
+    }
     expression = `(${expression})`.replaceAll(/\s/g, "");
+
     while (expression.match(/\(.*\)/)) {
         let exprChunk = expression.match(/\([^\(\)]*\)/);
         exprChunk = exprChunk[0].slice(1, exprChunk[0].length - 1);
@@ -133,11 +148,11 @@ function Buttons(props) {
             <button onClick={() => addChar("1")}>1</button>
             <button onClick={() => addChar("2")}>2</button>
             <button onClick={() => addChar("3")}>3</button>
-            <button onClick={() => addChar("+")}>+</button>
+            <button onClick={() => addChar("-")}>-</button>
             <button onClick={() => addChar("0")}>0</button>
             <button onClick={() => addChar(".")}>.</button>
-            <button onClick={() => addChar("-")}>-</button>
-            <button>=</button>
+            <button>spare</button>
+            <button onClick={() => addChar("+")}>+</button>
         </div>
     );
 }

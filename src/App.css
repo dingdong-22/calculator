@@ -5,7 +5,7 @@ body {
 .App {
     position: absolute;
     height: 500px;
-    width: 400px;
+    width: 350px;
     left: 0;
     right: 0;
     top: 0;
@@ -16,30 +16,29 @@ body {
 .input-window,
 .output-window {
     background-color: rgba(255, 255, 255);
-
-    font-size: 2.5rem;
-
+    font-size: 2rem;
     display: flex;
     flex-direction: row-reverse;
     align-items: flex-end;
-    padding: 1rem;
-
+    padding: 0.7rem;
 }
 
 .input-window {
     min-height: 8rem;
+    border: 1px black solid;
     word-wrap: break-word;
     word-break: break-all;
 }
 
 .output-window {
+    border: 1px black solid;
     height: 3rem;
 }
 
 .buttons {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
-    grid-template-rows: repeat(5, minmax(6rem, 1fr));
+    grid-template-rows: repeat(5, minmax(3rem, 1fr));
 }
 
 .buttons button {
@@ -57,4 +56,3 @@ body {
 .buttons .removal-button {
     background-color: rgb(255, 69, 0);
 }
-
