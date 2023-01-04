@@ -9,7 +9,7 @@ function App() {
     let [val, setVal] = useState("");
     return (
         <div className="App">
-            <InputScreen expr={expr} />
+            <InputScreen expr={expr} setExpr={setExpr} />
             <OutputScreen expr={expr} val={val} setVal={setVal} />
             <Buttons expr={expr} setExpr={setExpr} val={val} setVal={setVal} />
         </div>

@@ -1,5 +1,6 @@
 body {
     background-color: rgba(0, 0, 0, 0.75);
+    justify-content: center;
 }
 
 .App {
@@ -13,27 +14,38 @@ body {
     margin: auto;
 }
 
+.input-window-container,
 .input-window,
 .output-window {
     background-color: rgba(255, 255, 255);
-    display: flex;
-    flex-direction: row-reverse;
     font-size: 2rem;
-    padding: 0.7rem;
+}
+
+.input-window-container {
+    height: 1px;
+    min-height: 8rem;
+    border: 1px black solid;
+}
+
+form {
+    height: 100%;
 }
 
 .input-window {
-    min-height: 8rem;
-    border: 1px black solid;
-    align-items: flex-end;
-    word-wrap: break-word;
-    word-break: break-all;
+    height: 100%;
+    width: 100%;
+    padding: 0px;
+    border: 0px;
 }
 
 .output-window {
     border: 1px black solid;
     height: 3rem;
+    padding: 0.7rem;
+    display: flex;
+    flex-direction: row-reverse;
     align-items: center;
+    overflow: hidden;
 }
 
 .buttons {
