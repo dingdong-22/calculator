@@ -1,7 +1,3 @@
-import React, { useState } from "react";
-
-//maybe add a manual input
-
 let actions = {
     "÷": (a, b) => a / b,
     "×": (a, b) => a * b,
@@ -10,12 +6,8 @@ let actions = {
 };
 
 let binaryExpr = {
-    "÷": new RegExp(
-        `(?<e1>\\-?[0-9]+\\.?[0-9]*)\\÷(?<e2>\\-?[0-9]+\\.?[0-9]*)`
-    ),
-    "×": new RegExp(
-        `(?<e1>\\-?[0-9]+\\.?[0-9]*)\\×(?<e2>\\-?[0-9]+\\.?[0-9]*)`
-    ),
+    "÷": new RegExp(`(?<e1>\\-?[0-9]+\\.?[0-9]*)÷(?<e2>\\-?[0-9]+\\.?[0-9]*)`),
+    "×": new RegExp(`(?<e1>\\-?[0-9]+\\.?[0-9]*)×(?<e2>\\-?[0-9]+\\.?[0-9]*)`),
     "+": new RegExp(
         `(?<e1>\\-?[0-9]+\\.?[0-9]*)\\+(?<e2>\\-?[0-9]+\\.?[0-9]*)`
     ),
@@ -28,21 +20,21 @@ function unaryResolver(exprChunk) {
     let changes = true;
     while (changes) {
         changes = false;
-        let info = exprChunk.match(/(?<op>[\÷|\×])\+/);
+        let info = exprChunk.match(/(?<op>[÷|×])\+/);
         if (info) {
-            exprChunk = exprChunk.replace(/(?<op>[\÷|\×])\+/, info.groups.op);
+            exprChunk = exprChunk.replace(/(?<op>[÷|×])\+/, info.groups.op);
             changes = true;
         }
-        if (exprChunk.match(/\+\-/)) {
-            exprChunk = exprChunk.replace(/\+\-/, "-");
+        if (exprChunk.match(/\+-/)) {
+            exprChunk = exprChunk.replace(/\+-/, "-");
             changes = true;
         }
-        if (exprChunk.match(/\-\+/)) {
-            exprChunk = exprChunk.replace(/\-\+/, "-");
+        if (exprChunk.match(/-\+/)) {
+            exprChunk = exprChunk.replace(/-\+/, "-");
             changes = true;
         }
-        if (exprChunk.match(/\-\-/)) {
-            exprChunk = exprChunk.replace(/\-\-/, "+");
+        if (exprChunk.match(/--/)) {
+            exprChunk = exprChunk.replace(/--/, "+");
             changes = true;
         }
         if (exprChunk.match(/\+\+/)) {
@@ -69,14 +61,14 @@ function parentheseCount(expression) {
 }
 
 function calc(expression) {
-    console.log("expression", expression);
+    console.log("Expression:", expression);
     if (!parentheseCount(expression)) {
         return NaN;
     }
     expression = `(${expression})`.replaceAll(/\s/g, "");
 
     while (expression.match(/\(.*\)/)) {
-        let exprChunk = expression.match(/\([^\(\)]*\)/);
+        let exprChunk = expression.match(/\([^()]*\)/);
         exprChunk = exprChunk[0].slice(1, exprChunk[0].length - 1);
         exprChunk = unaryResolver(exprChunk);
         for (const op of Object.keys(actions)) {
@@ -93,7 +85,7 @@ function calc(expression) {
                 }
             }
         }
-        expression = expression.replace(/\([^\(\)]*\)/, exprChunk);
+        expression = expression.replace(/\([^()]*\)/, exprChunk);
     }
     return Number(expression);
 }
@@ -114,9 +106,9 @@ function Buttons(props) {
     }
 
     function updateOutput(expr) {
-        let evaluation = calc(expr);
-        console.log("Calculated val:", evaluation);
-        props.setVal(evaluation);
+        let val = calc(expr);
+        console.log("Calculated val:", val);
+        props.setVal(val);
     }
     updateOutput(props.expr);
 
@@ -158,3 +150,5 @@ function Buttons(props) {
 }
 
 export default Buttons;
+
+//maybe add a manual input

@@ -1,7 +1,7 @@
+import React, { useState } from "react";
 import "./App.css";
 import InputScreen from "./InputScreen.jsx";
 import Buttons from "./Buttons.jsx";
-import React, { useState } from "react";
 import OutputScreen from "./OutputScreen.jsx";
 
 function App() {
