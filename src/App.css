@@ -18,7 +18,7 @@ body {
 .input-window,
 .output-window {
     background-color: rgba(255, 255, 255);
-    font-size: 2rem;
+    font-size: 1.8rem;
 }
 
 .input-window-container {
@@ -36,6 +36,7 @@ form {
     width: 100%;
     padding: 0px;
     border: 0px;
+    resize: none;
 }
 
 .output-window {
