@@ -1,72 +1,74 @@
 body {
-    background-color: rgba(0, 0, 0, 0.75);
-    justify-content: center;
+  background-color: rgba(0, 0, 0, 0.75);
+  justify-content: center;
 }
 
 .App {
-    position: absolute;
-    height: 500px;
-    width: 350px;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    margin: auto;
+  position: absolute;
+  height: fit-content;
+  width: 350px;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border: 2px black solid;
 }
 
 .input-window-container,
 .input-window,
 .output-window {
-    background-color: rgba(255, 255, 255);
-    font-size: 1.8rem;
+  background-color: rgba(255, 255, 255);
+  font-size: 1.8rem;
 }
 
 .input-window-container {
-    height: 1px;
-    min-height: 8rem;
-    border: 1px black solid;
+  height: 1px;
+  min-height: 8rem;
+  border: 1px black solid;
 }
 
 form {
-    height: 100%;
+  height: 100%;
 }
 
 .input-window {
-    height: 100%;
-    width: 100%;
-    padding: 0px;
-    border: 0px;
-    resize: none;
+  height: 100%;
+  width: 100%;
+  padding: 0px;
+  border: 0px;
+  resize: none;
+  outline: 0;
 }
 
 .output-window {
-    border: 1px black solid;
-    height: 3rem;
-    padding: 0.7rem;
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    overflow: hidden;
+  border: 1px black solid;
+  height: 3rem;
+  padding: 0.7rem;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  overflow: hidden;
 }
 
 .buttons {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    grid-template-rows: repeat(5, minmax(3rem, 1fr));
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-rows: repeat(6, minmax(3rem, 1fr));
 }
 
 .buttons button {
-    background-color: rgba(105, 105, 105, 0.75);
-    color: rgb(245, 255, 250);
-    border: 1px solid black;
-    font-size: 1.8rem;
-    cursor: pointer;
+  background-color: rgba(105, 105, 105, 0.75);
+  color: rgb(245, 255, 250);
+  border: 1px solid black;
+  font-size: 1.8rem;
+  cursor: pointer;
 }
 
 .buttons .bracket-button {
-    background-color: rgb(32, 178, 170);
+  background-color: rgb(32, 178, 170);
 }
 
 .buttons .removal-button {
-    background-color: rgb(255, 69, 0);
+  background-color: rgb(255, 69, 0);
 }
