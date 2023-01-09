@@ -8,7 +8,7 @@ function Buttons(props) {
     props.setExpr(props.expr + char);
   }
 
-  function deleteChar(all = false) {
+  function deleteChar(all) {
     console.log("Deleting all:", all);
     if (all) {
       props.setExpr("");
@@ -26,6 +26,7 @@ function Buttons(props) {
 
   return (
     <div className="buttons">
+      <button></button>
       {shift ? (
         <button onClick={() => addChar("sin")}>sin</button>
       ) : (
@@ -49,28 +50,37 @@ function Buttons(props) {
       <button className="bracket-button" onClick={() => addChar(")")}>
         )
       </button>
+      <button onClick={() => addChar("π")}>π</button>
+      <button onClick={() => addChar("e")}>e</button>
+      <button onClick={() => addChar("ln")}>ln</button>
+
+      <button onClick={() => addChar("7")}>7</button>
+      <button onClick={() => addChar("8")}>8</button>
+      <button onClick={() => addChar("9")}>9</button>
       <button className="removal-button" onClick={() => deleteChar(false)}>
         DEL
       </button>
       <button className="removal-button" onClick={() => deleteChar(true)}>
         AC
       </button>
-      <button onClick={() => addChar("7")}>7</button>
-      <button onClick={() => addChar("8")}>8</button>
-      <button onClick={() => addChar("9")}>9</button>
-      <button onClick={() => addChar("÷")}>÷</button>
+
       <button onClick={() => addChar("4")}>4</button>
       <button onClick={() => addChar("5")}>5</button>
       <button onClick={() => addChar("6")}>6</button>
       <button onClick={() => addChar("×")}>×</button>
+      <button onClick={() => addChar("÷")}>÷</button>
+
       <button onClick={() => addChar("1")}>1</button>
       <button onClick={() => addChar("2")}>2</button>
       <button onClick={() => addChar("3")}>3</button>
+      <button onClick={() => addChar("+")}>+</button>
       <button onClick={() => addChar("-")}>-</button>
+
       <button onClick={() => addChar("0")}>0</button>
       <button onClick={() => addChar(".")}>.</button>
+      <button onClick={() => addChar("E")}>EXP</button>
       <button onClick={() => addChar("^")}>^</button>
-      <button onClick={() => addChar("+")}>+</button>
+      <button onClick={() => addChar("!")}>!</button>
     </div>
   );
 }
