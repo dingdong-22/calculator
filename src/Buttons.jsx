@@ -26,7 +26,7 @@ function Buttons(props) {
 
   return (
     <div className="buttons">
-      <button></button>
+      <button onClick={() => addChar("Abs")}>Abs</button>
       {shift ? (
         <button onClick={() => addChar("sin")}>sin</button>
       ) : (

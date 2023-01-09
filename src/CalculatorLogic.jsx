@@ -1,6 +1,7 @@
 let unarys = ["sin", "cos", "tan", "asin", "acos", "atan", "ln", "!"];
 
 let actions = {
+  Abs: (a) => Math.abs(a),
   ln: (a) => Math.log(a),
   asin: (a) => Math.asin(a),
   acos: (a) => Math.acos(a),
@@ -19,6 +20,7 @@ let actions = {
 };
 
 let binaryExpr = {
+  Abs: new RegExp(`Abs(?<e1>\\-?[0-9]+\\.?[0-9]*)`),
   ln: new RegExp(`ln(?<e1>\\-?[0-9]+\\.?[0-9]*)`),
   asin: new RegExp(`asin(?<e1>\\-?[0-9]+\\.?[0-9]*)`),
   acos: new RegExp(`acos(?<e1>\\-?[0-9]+\\.?[0-9]*)`),
@@ -89,7 +91,11 @@ function parenthesesCount(expression) {
 }
 
 function isValid(expression) {
-  if (expression.match(/[0-9]e/) || expression.match(/[0-9]π/)) {
+  if (
+    expression.match(/[0-9]e/) ||
+    expression.match(/[0-9]π/) ||
+    expression.match(/Abs-?[0-9]/)
+  ) {
     return false;
   }
   return true;
