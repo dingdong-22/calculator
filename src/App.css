@@ -1,6 +1,16 @@
 body {
-  background-color: rgba(0, 0, 0, 0.75);
   justify-content: center;
+  background-color: #5f85b8;
+
+  --clr-button: #2e2d2d;
+  --clr-window: #ffffff;
+  --clr-button-bracket: #0a9e96;
+  --clr-button-removal: #ff3c00;
+  --clr-button-text: #ffffff;
+  --clr-button-ele: #ffb22c;
+  --clr-button-trig: #0a9e96;
+  --clr-button-constant: #2e2d2d;
+  --clr-button-other: #0a9e96;
 }
 
 .App {
@@ -18,7 +28,7 @@ body {
 .input-window-container,
 .input-window,
 .output-window {
-  background-color: rgba(255, 255, 255);
+  background-color: var(--clr-window);
   font-size: 1.8rem;
 }
 
@@ -58,17 +68,33 @@ form {
 }
 
 .buttons button {
-  background-color: rgba(105, 105, 105, 0.75);
-  color: rgb(245, 255, 250);
+  background-color: var(--clr-button);
+  color: var(--clr-button-text);
   border: 1px solid black;
   font-size: 1.8rem;
   cursor: pointer;
 }
 
 .buttons .bracket-button {
-  background-color: rgb(32, 178, 170);
+  background-color: var(--clr-button-bracket);
 }
 
 .buttons .removal-button {
-  background-color: rgb(255, 69, 0);
+  background-color: var(--clr-button-removal);
+}
+
+.buttons .elementary {
+  background-color: var(--clr-button-ele);
+}
+
+.buttons .trig {
+  background-color: var(--clr-button-trig);
+}
+
+.buttons .constant {
+  background-color: var(--clr-button-constant);
+}
+
+.buttons .other {
+  background-color: var(--clr-button-other);
 }
