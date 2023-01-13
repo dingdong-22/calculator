@@ -1,13 +1,13 @@
 # Calculator App
 
-A calculator that evaluates expressions dynamically
+A calculator that updates expressions dynamically
 
 # Features
 
-![Features](/resource/layout.png)
+<!-- ![Features](/resource/layout.png) -->
+<img src="./resource/layout.png" width="150" />
 
 ## Basic (Black, Orange, Red)
-
 - Numbers
 - Decimal
 - Addition, Subtraction, Multiplication, Division, Exponents
@@ -15,7 +15,6 @@ A calculator that evaluates expressions dynamically
 - AC: All clear, deletes entire expression
 
 ## Advanced (Blue)
-
 - Abs: Absolute value, Abs(x) returns the non negative value of x
 - Trigonometry functions as well as their inverses
 - shift: Inverts the current trigonometry buttons
@@ -24,14 +23,14 @@ A calculator that evaluates expressions dynamically
 - Brackets
 
 ## Other Features
-
 - The calculator dynamically evaluates the expression
 - Can click and manually input expressions into the input window
 
 # Demo
 
-![Demo](/resource/demo.gif)
+<!-- ![Demo](/resource/demo.gif) -->
+<img src="./resource/demo.gif" width="200" />
 
 ## Authors
 
-- Me
+- Me 
