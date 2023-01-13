@@ -5,9 +5,10 @@ A calculator that updates expressions dynamically
 # Features
 
 <!-- ![Features](/resource/layout.png) -->
-<img src="./resource/layout.png" width="150" />
+<img src="./resource/layout.png" width="350" />
 
 ## Basic (Black, Orange, Red)
+
 - Numbers
 - Decimal
 - Addition, Subtraction, Multiplication, Division, Exponents
@@ -15,6 +16,7 @@ A calculator that updates expressions dynamically
 - AC: All clear, deletes entire expression
 
 ## Advanced (Blue)
+
 - Abs: Absolute value, Abs(x) returns the non negative value of x
 - Trigonometry functions as well as their inverses
 - shift: Inverts the current trigonometry buttons
@@ -23,14 +25,15 @@ A calculator that updates expressions dynamically
 - Brackets
 
 ## Other Features
+
 - The calculator dynamically evaluates the expression
 - Can click and manually input expressions into the input window
 
 # Demo
 
 <!-- ![Demo](/resource/demo.gif) -->
-<img src="./resource/demo.gif" width="200" />
+<img src="./resource/demo.gif" width="350" />
 
 ## Authors
 
-- Me 
+- Me
