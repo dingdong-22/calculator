@@ -11,6 +11,7 @@ A calculator that updates expressions dynamically
 
 - Numbers
 - Decimal
+- Constants (pi, Euler's number)
 - Addition, Subtraction, Multiplication, Division, Exponents
 - DEL: deletes one character
 - AC: All clear, deletes entire expression
