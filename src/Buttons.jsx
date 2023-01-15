@@ -29,7 +29,7 @@ function Buttons(props) {
       <button className="other" onClick={() => addChar("Abs")}>
         Abs
       </button>
-      {shift ? (
+      {!shift ? (
         <button className="trig" onClick={() => addChar("sin")}>
           sin
         </button>
@@ -38,7 +38,7 @@ function Buttons(props) {
           asin
         </button>
       )}
-      {shift ? (
+      {!shift ? (
         <button className="trig" onClick={() => addChar("cos")}>
           cos
         </button>
@@ -47,7 +47,7 @@ function Buttons(props) {
           acos
         </button>
       )}
-      {shift ? (
+      {!shift ? (
         <button className="trig" onClick={() => addChar("tan")}>
           tan
         </button>
