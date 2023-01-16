@@ -68,6 +68,8 @@ form {
 }
 
 .buttons button {
+  display: grid;
+  place-content: center;
   background-color: var(--clr-button);
   color: var(--clr-button-text);
   border: 1px solid black;
